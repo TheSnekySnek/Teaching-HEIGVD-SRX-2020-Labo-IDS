@@ -455,7 +455,8 @@ Essayer d'écrire une règle qui Alerte qu'une tentative de session SSH a été 
 
 ---
 
-**Reponse :**  
+**Reponse : alert tcp $LAN any -> any $SSH (msg:"SSH Session"; content:"|15|"; offset:5; sid:4000018; rev:1;)**
+**La règle se base sur la détection du début de léchange des clés SSH. le protocole est tcp, l'ip source est la machine du voisin, la destination est le port 22(ssh), content cherche le byte 0x15 et offset specifie de chercher le byte après les 5 premiers bytes.**
 
 ---
 
@@ -478,7 +479,7 @@ Lancer Wireshark et faire une capture du trafic sur l'interface connectée au br
 
 ---
 
-**Reponse :**  
+**Reponse :L'option -r**  
 
 ---
 
@@ -488,7 +489,7 @@ Utiliser l'option correcte de Snort pour analyser le fichier de capture Wireshar
 
 ---
 
-**Reponse :**  
+**Reponse : Snort affiche les paquets capturé directement dans la console et garde le même affichage que lors de la terminaison de l'application (sommaire de l'analyse)**  
 
 ---
 
@@ -496,7 +497,7 @@ Utiliser l'option correcte de Snort pour analyser le fichier de capture Wireshar
 
 ---
 
-**Reponse :**  
+**Reponse :Oui (vu pour SSH)**  
 
 ---
 
@@ -510,7 +511,7 @@ Faire des recherches à propos des outils `fragroute` et `fragtest`.
 
 ---
 
-**Reponse :**  
+**Reponse : fragroute permet de fragmenter les paquets qui sorte de la machine, fragtest permet de savoir queul type de paquet fragmenté sont admit et répondu par la destination**  
 
 ---
 
@@ -519,7 +520,9 @@ Faire des recherches à propos des outils `fragroute` et `fragtest`.
 
 ---
 
-**Reponse :**  
+**Reponse : Il y a deux principes: **
+**          - Les paquets fragmenté seront refragmenté d'une façon particulière lié à la cible, l'attaquant peux donc fragmenté le paquet qui sera accepté par la cible mais qui ne correspondra pas aux règle de l'IDS.
+**          - Il peut aussi générer une grande quantité de trafique pour que l'IDS soit incapable de l'analyser**  
 
 ---
 
@@ -528,7 +531,7 @@ Faire des recherches à propos des outils `fragroute` et `fragtest`.
 
 ---
 
-**Reponse :**  
+**Reponse : Ce preprocesseur permet à Snort de defragmenté beaucoup plus rapidement ces paquets et aussi d'utiliser les information de la cible pour defragmenté les paquets comme elle.**  
 
 ---
 
