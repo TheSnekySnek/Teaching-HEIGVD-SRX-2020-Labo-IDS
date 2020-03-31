@@ -286,7 +286,7 @@ Vous pouvez aussi utiliser des captures Wireshark ou des fichiers snort.log.xxxx
 
 ---
 
-**Reponse :**  
+**Reponse : Ce sont des "plugins" qui se lancent avant le system de detection mais après avoir décodé le paquet. Ils permetent par example l'analyse distribuée sur plusieurs paquets**  
 
 ---
 
@@ -294,7 +294,7 @@ Vous pouvez aussi utiliser des captures Wireshark ou des fichiers snort.log.xxxx
 
 ---
 
-**Reponse :**  
+**Reponse : Car aucun preprocesseur n'a été activé dans notre configuration.**  
 
 ---
 
@@ -310,7 +310,7 @@ alert tcp any any -> any any (msg:"Mon nom!"; content:"Rubinstein"; sid:4000015;
 
 ---
 
-**Reponse :**  
+**Reponse : La règle lance une alerte avec comme message "Mon nom!" pour tous le paquets qui contiennent le string "Rubinstein"**  
 
 ---
 
@@ -324,7 +324,12 @@ sudo snort -c myrules.rules -i eth0
 
 ---
 
-**Reponse :**  
+**Reponse : On voit que Snort initialise ses plugins ainsi que ses preprocesseurs, il lit ensuite les règles, donne le répertoire des logs et affiche des informations sur les règles Un header affiche les information sur le AC-BNFA(methode de recherche), des informations sur l'initialisation  et la configuration de pcap suivi d'un autre header sur la version de snort et ses informations suivi de "Commencing packet processing" qui indique le début de l'analyse**  
+
+![Init 1](images/init-1.PNG)
+
+![Init 2](images/init-2.PNG)
+
 
 ---
 
@@ -334,7 +339,7 @@ Aller à un site web contenant dans son text votre nom ou votre mot clé que vou
 
 ---
 
-**Reponse :**  
+**Reponse : Rien n'est affiché a part le warning du preprocesseur**  
 
 ---
 
@@ -344,8 +349,11 @@ Arrêter Snort avec `CTRL-C`.
 
 ---
 
-**Reponse :**  
+**Reponse : Snort affiche les informations liées à la session comme le temps d'analyse, le nombre de paquets, l'utilisation mémoire, input/output de paquets, le nombre de paquets par protocole, le nombre d'actions effectuées(alert, logged, passed)ainsi que les verdicts(nombre de paquets autorisés, bloqués, etc...)**  
 
+![Stop 1](images/stop-1.PNG)
+
+![Stop 2](images/stop-2.PNG)
 ---
 
 
@@ -355,7 +363,9 @@ Aller au répertoire /var/log/snort. Ouvrir le fichier `alert`. Vérifier qu'il 
 
 ---
 
-**Reponse :**  
+**Reponse : L'alerte est un block de texte qui comme entete le sid de la règle et le message d'alerte suivi de la date et l'heure de la detection, les ip source et destination, la ligne suivante correspond à l'entete ip (protocole,time to live, type of service, etc...), la dernière ligne correspond à l'entete tcp(sequance, acknowledge, window, etc...)**  
+
+![alert](images/alertName.PNG)
 
 ---
 
