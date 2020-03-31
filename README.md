@@ -380,7 +380,12 @@ Ecrire une règle qui journalise (sans alerter) un message à chaque fois que Wi
 
 ---
 
-**Reponse :**  
+**Reponse : Règle: log tcp 192.168.1.128 any -> 208.80.154.232 443 (msg:"Wikipedia"; sid:4000016; rev:1;)
+Le message est journaliser dans /var/log/snort/snort.log._timestamp_
+Le fichier est un pcap mais il peut etre lu par snort avec snort -r fichier_log** 
+
+![log wikipedia](images/log.PNG)
+
 
 ---
 
@@ -389,12 +394,12 @@ Ecrire une règle qui journalise (sans alerter) un message à chaque fois que Wi
 ### Detecter un ping d'un autre système
 
 Ecrire une règle qui alerte à chaque fois que votre système reçoit un ping depuis une autre machine (je sais que la situation actuelle du Covid-19 ne vous permet pas de vous mettre ensemble... utilisez votre imagination pour trouver la solution à cette question !). Assurez-vous que **ça n'alerte pas** quand c'est vous qui envoyez le ping vers un autre système !
-
+r
 **Question 9: Quelle est votre règle ?**
 
 ---
 
-**Reponse :**  
+**Reponse : alert icmp any any -> $HOST any (msg:"ICMP Echo Request"; itype:8; sid:4000017; rev:1;)**  
 
 ---
 
@@ -403,7 +408,7 @@ Ecrire une règle qui alerte à chaque fois que votre système reçoit un ping d
 
 ---
 
-**Reponse :**  
+**Reponse : J'ai preciser le type de message icmp avec itype: 8; 8 est un message ICMP Echo Request**  
 
 ---
 
@@ -412,7 +417,7 @@ Ecrire une règle qui alerte à chaque fois que votre système reçoit un ping d
 
 ---
 
-**Reponse :**  
+**Reponse : dans le fichier d'alerte /var/log/snort/alerts**  
 
 ---
 
@@ -421,7 +426,7 @@ Ecrire une règle qui alerte à chaque fois que votre système reçoit un ping d
 
 ---
 
-**Reponse :**  
+**Reponse :La même chose que pour la règle "Mon nom!" mais avec l'en-tete ICMP à la fin avec nottament le type de message**  
 
 ---
 
@@ -435,7 +440,7 @@ Modifier votre règle pour que les pings soient détectés dans les deux sens.
 
 ---
 
-**Reponse :**  
+**Reponse :J'ai simplement retiré le itype:8;**  
 
 ---
 
