@@ -564,7 +564,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse :**  
+**Reponse : Il permet l'inspection des handshakes SSL/TLS mais pas du payload**  
 
 ---
 
@@ -573,7 +573,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse :**  
+**Reponse :Il permet de detecter des information sensible comme des numeros de cartes de crédit, des adresses mail, etc...**  
 
 ---
 
