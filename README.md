@@ -428,6 +428,8 @@ r
 
 **Reponse :La même chose que pour la règle "Mon nom!" mais avec l'en-tete ICMP à la fin avec nottament le type de message**  
 
+![log ping](images/echorequest.PNG)
+
 ---
 
 --
@@ -465,7 +467,7 @@ Essayer d'écrire une règle qui Alerte qu'une tentative de session SSH a été 
 
 ---
 
-![log wikipedia](images/srx_ssh.PNG)
+![SSH](images/srx_ssh.PNG)
 
 ---
 
