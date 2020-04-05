@@ -442,7 +442,9 @@ Modifier votre règle pour que les pings soient détectés dans les deux sens.
 
 ---
 
-**Reponse :J'ai simplement retiré le itype:8;**  
+**Reponse :Nous avons modifié la flèche -> pour quelle pointe vers les deux sens <>. Ceci permet d'appliquer la règle des deux cotés.**  
+
+**alert icmp any any <> $HOST any (msg:"ICMP Echo Request"; itype:8; sid:4000017; rev:1;)**
 
 ---
 
@@ -586,7 +588,9 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse :**  
+**Reponse : Nous avons pu mettre en pratique ce que nous avons vu en cours sur les IDS de façon simple.**
+
+**Nous avons aussi découvere Snort qui est un outil très simple à prendre en main mais aussi très puissant et personalisable.**
 
 ---
 
