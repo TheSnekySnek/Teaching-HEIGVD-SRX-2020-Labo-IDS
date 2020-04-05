@@ -442,7 +442,7 @@ Modifier votre règle pour que les pings soient détectés dans les deux sens.
 
 ---
 
-**Reponse :Nous avons modifié la flèche -> pour quelle pointe vers les deux sens <>. Ceci permet d'appliquer la règle des deux cotés.**  
+**Reponse :Nous avons modifié la flèche -> pour quelle pointe vers les deux sens <>. Ceci permet d'appliquer la règle des deux côtés.**  
 
 **alert icmp any any <> $HOST any (msg:"ICMP Echo Request"; itype:8; sid:4000017; rev:1;)**
 
