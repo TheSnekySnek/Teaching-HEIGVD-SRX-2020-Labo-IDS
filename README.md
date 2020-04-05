@@ -545,7 +545,7 @@ Reprendre l'exercice de la partie [Trouver votre nom](#trouver-votre-nom-). Essa
 
 ---
 
-**Reponse :**  
+**Reponse : Aucune alerte n'est lancée par snort en utilisant fragroute sur l'hote.**  
 
 ---
 
@@ -557,7 +557,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse :**  
+**Reponse : Des alertes sont lancée avec le preprocesseur Frag3 activé.**  
 
 ---
 
