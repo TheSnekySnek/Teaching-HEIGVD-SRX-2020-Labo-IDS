@@ -310,7 +310,7 @@ alert tcp any any -> any any (msg:"Mon nom!"; content:"Rubinstein"; sid:4000015;
 
 ---
 
-**Reponse : La règle lance une alerte avec comme message "Mon nom!" pour tous le paquets qui contiennent le string "Rubinstein"**  
+**Reponse : Cette règle va créer une alerte si un paquet TCP qui contient "Rubinstein" est intercepté. Peu importe les adresses et ports sources et destinations.**  
 
 ---
 
