@@ -8,6 +8,11 @@ Clonez le repo sur votre machine. Vous pouvez répondre aux questions en modifia
 
 **Le rendu consiste simplement à répondre à toutes les questions clairement identifiées dans le text avec la mention "Question" et à les accompagner avec des captures. Le rendu doit se faire par une "pull request". Envoyer également le hash du dernier commit et votre username GitHub par email au professeur et à l'assistant**
 
+## Auteurs
+Diego Villagrasa
+
+Jean-Luc Blanc
+
 ## Table de matières
 
 [Introduction](#introduction)
