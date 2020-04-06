@@ -515,7 +515,11 @@ Faire des recherches à propos des outils `fragroute` et `fragtest`.
 
 ---
 
-**Reponse : fragroute permet de fragmenter les paquets qui sorte de la machine, fragtest permet de savoir queul type de paquet fragmenté sont admit et répondu par la destination**  
+**Reponse :** 
+
+**Fragroute : Fragmente les paquets sortant de la machine**
+
+**Fragtest : Permet de déterminer quels types de messages fragmentés sont traités**
 
 ---
 
@@ -524,9 +528,7 @@ Faire des recherches à propos des outils `fragroute` et `fragtest`.
 
 ---
 
-**Reponse : Il y a deux principes: **
-**          - Les paquets fragmenté seront refragmenté d'une façon particulière lié à la cible, l'attaquant peux donc fragmenté le paquet qui sera accepté par la cible mais qui ne correspondra pas aux règle de l'IDS.
-**          - Il peut aussi générer une grande quantité de trafique pour que l'IDS soit incapable de l'analyser**  
+**Reponse : Les paquets fragmenté seront refragmenté d'une façon particulière lié à la cible, l'attaquant peux donc fragmenté le paquet qui sera accepté par la cible mais qui ne correspondra pas aux règle de l'IDS.**
 
 ---
 
@@ -535,7 +537,7 @@ Faire des recherches à propos des outils `fragroute` et `fragtest`.
 
 ---
 
-**Reponse : Ce preprocesseur permet à Snort de defragmenté beaucoup plus rapidement ces paquets et aussi d'utiliser les information de la cible pour defragmenté les paquets comme elle.**  
+**Reponse : Ce preprocesseur permet à Snort d'utiliser les informations de la cible pour defragmenter les paquets comme elle.**  
 
 ---
 
@@ -559,7 +561,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse : Des alertes sont lancée avec le preprocesseur Frag3 activé.**  
+**Reponse : Des alertes sont lancées avec le preprocesseur Frag3 activé.**  
 
 ---
 
@@ -568,7 +570,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse : Il permet l'inspection des handshakes SSL/TLS mais pas du payload**  
+**Reponse : Permet de déterminer si il y a eu un handshake SSL/TLS ou si il y en a un actuellement**  
 
 ---
 
@@ -577,7 +579,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 ---
 
-**Reponse :Il permet de detecter des information sensible comme des numeros de cartes de crédit, des adresses mail, etc...**  
+**Reponse : Module qui permet la détection et le filtrage des PII (Personally Identifiable Information) comme les numéros de cartes de crédits, les numéros de sécurité social, les adresses emails, ....**  
 
 ---
 
@@ -590,7 +592,7 @@ Modifier le fichier `myrules.rules` pour que snort utiliser le `Frag3 Preprocess
 
 **Reponse : Nous avons pu mettre en pratique ce que nous avons vu en cours sur les IDS de façon simple.**
 
-**Nous avons aussi découvere Snort qui est un outil très simple à prendre en main mais aussi très puissant et personalisable.**
+**Nous avons aussi découvere Snort qui est un outil puissant permettant à un informaticien avéré d'en faire un usage multiple notamment pour la sécurité des réseaux.**
 
 ---
 
